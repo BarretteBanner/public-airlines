@@ -11,7 +11,7 @@ export class PassengerShow extends React.Component {
     } 
 
     componentDidMount(){
-        fetch(`http://localhost:3001/api/passengers/${this.props.match.params.id}`)
+        fetch(`http://'http://35.202.3.50/api/passengers/${this.props.match.params.id}`)
             .then( response => response.json())
             .then( passenger => this.setState({ passenger: passenger }))
         fetch(`http://localhost:3001/api/airlines`)
@@ -21,7 +21,7 @@ export class PassengerShow extends React.Component {
 
     createTicket = (e) => {
         e.preventDefault()
-        fetch('http://localhost:3001/api/tickets', {
+        fetch('http://'http://35.202.3.50/api/tickets', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
